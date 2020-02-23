@@ -18,6 +18,7 @@ public class Actividad2_AEDI {
         
         
         //Creamos una estructura enlazada simple
+        System.out.println("Estructura enlazada simple:");
         EnlazadaSimple2Refer e = new  EnlazadaSimple2Refer();
         
         e.insertarPrincipio(1);
@@ -28,7 +29,7 @@ public class Actividad2_AEDI {
         
         System.out.println(e.toString());
         
-        System.out.println("Numero de elementos: " + e.numElem());
+        System.out.println("\nNumero de elementos: " + e.numElem());
         System.out.println("Numero veces: " + e.numVeces(1));
         System.out.println("El elemento esta? " + e.esta(1));
         
@@ -39,6 +40,28 @@ public class Actividad2_AEDI {
         System.out.println("Numero de elementos: " + e.numElem());
         System.out.println("Numero veces: " + e.numVeces(1));
         System.out.println("El elemento esta? " + e.esta(1));
+        
+        
+        System.out.println("-----------------------------------------");
+        
+        System.out.println("\nEstructura doblemente enlazada");
+        //Creamos una estructura doblemente enlazada
+        DoblementeEnlazada de = new DoblementeEnlazada();
+        de.insertarPrincipio(1);
+        de.insertarFinal(8);
+        de.insertarFinal(5);
+        de.insertarFinal(3);
+        de.insertarFinal(10);
+        
+        System.out.println(de.toString());
+        
+        System.out.println("\nNumero de elementos: " + de.numElem());
+        
+        //Borrar un elemento
+        de.borrar(1);
+        
+        System.out.println("\nDespues de borrar:");
+        System.out.println("Numero de elementos: " + de.numElem());
     }
     
 }

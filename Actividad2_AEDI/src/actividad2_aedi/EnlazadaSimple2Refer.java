@@ -103,12 +103,12 @@ public class EnlazadaSimple2Refer {
     
     @Override
     public String toString() {
-        String res ="";
+        String elem ="";
         
         for(Nodo actual = primero; actual != null; actual = actual.getSig()){
-            res += actual.getElem().toString() + \n;
+            elem+=actual.getElem() + " ";
         }
-        return res;
+        return elem;
     }
     
 }
