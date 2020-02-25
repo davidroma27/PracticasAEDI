@@ -42,7 +42,7 @@ public class DoblementeEnlazada {
             primero = nuevo;
         }
         else{
-            //ultimo.setSig(nuevo);
+            ultimo.setSig(nuevo);
             nuevo.setAnt(ultimo);
         }
         ultimo = nuevo;
@@ -83,6 +83,7 @@ public class DoblementeEnlazada {
                     else{ //Borrar un elemento en el medio
                         actual.getAnt().setSig(actual.getSig());
                         actual.getSig().setAnt(actual.getAnt());
+                        numElem--;
                     }
                 }
             }
