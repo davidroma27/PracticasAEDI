@@ -24,13 +24,12 @@ public class DoblementeEnlazada {
     }
     
     public void insertarPrincipio(int elem){
-        DobleNodo nuevo = new DobleNodo(elem, null, null);
+        DobleNodo nuevo = new DobleNodo(elem, primero, null);
         
         if(primero != null){
-            nuevo.setSig(primero);
             primero.setAnt(nuevo);
-            ultimo = nuevo;
         }
+        else ultimo = nuevo;
         primero = nuevo;
         numElem++;
     }

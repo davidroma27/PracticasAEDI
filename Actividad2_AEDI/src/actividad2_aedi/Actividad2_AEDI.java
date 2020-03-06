@@ -48,16 +48,11 @@ public class Actividad2_AEDI {
         //Creamos una estructura doblemente enlazada
         DoblementeEnlazada de = new DoblementeEnlazada();
         
-        /**
-         * SE PRODUCE ERROR CUANDO SE USA insertarPrincipio() EN EL PRIMER INSERT Y
-         * SE REALIZAN OTROS INSERT CON insertarFinal()
-         * 
-         */
-        de.insertarFinal(1);
+        de.insertarPrincipio(1);
         de.insertarFinal(8);
         de.insertarFinal(5);
         de.insertarFinal(3);
-        de.insertarPrincipio(10);
+        de.insertarFinal(10);
         
         System.out.println(de.toString());
         
