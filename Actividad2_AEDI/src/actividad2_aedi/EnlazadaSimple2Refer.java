@@ -90,7 +90,7 @@ public class EnlazadaSimple2Refer {
                     actual = actual.getSig(); //Pasa al siguiente elemento
                 }
                 
-                if(actual.getSig() == null){ //Si la referencia actual apunta a null
+                if(actual.getSig() == ultimo){ //Si la referencia actual apunta a null
                     System.out.println("El elemento no está en la estructura");
                 }
                 else{ //Si encontramos el elemento a borrar

@@ -37,6 +37,8 @@ public class Actividad2_AEDI {
         e.borrar(1);
         
         System.out.println("\nDespues de borrar:");
+        System.out.println(e.toString());
+        
         System.out.println("Numero de elementos: " + e.numElem());
         System.out.println("Numero veces: " + e.numVeces(1));
         System.out.println("El elemento esta? " + e.esta(1));
@@ -57,13 +59,15 @@ public class Actividad2_AEDI {
         System.out.println(de.toString());
         
         System.out.println("\nNumero de elementos: " + de.numElem());
+        System.out.println("Numero veces: " + de.numVeces(8));
         
         //Borrar un elemento
-        de.borrar(8);
+        de.borrar(10);
         
         System.out.println("\nDespues de borrar:");
         System.out.println(de.toString());
         System.out.println("\nNumero de elementos: " + de.numElem());
+        System.out.println("Numero veces: " + de.numVeces(8));
         
         
         System.out.println("-----------------------------------------");

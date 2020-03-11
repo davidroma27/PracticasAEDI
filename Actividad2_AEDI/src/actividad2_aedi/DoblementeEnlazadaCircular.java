@@ -51,8 +51,8 @@ public class DoblementeEnlazadaCircular {
         else{
             nuevo.setSig(fin.getSig()); //El nuevo apunta al primero
             nuevo.setAnt(fin); //El nuevo apunta al anterior (FIN)
-            fin.setSig(nuevo); //El siguiente de fin apounta la nuevo
             fin.getSig().setAnt(nuevo); //El primero apunta al anterior (NUEVO)
+            fin.setSig(nuevo); //El siguiente de fin apunta la nuevo
         }
         fin = nuevo;
         numElem++;

@@ -21,7 +21,7 @@ public class OrdenadaEnlazadaCentinela {
     public boolean esta(int elem){
         Nodo actual = primero.getSig();
         
-        while(actual != null && actual.getElem() != elem){
+        while(actual != null && actual.getElem() < elem){
             actual = actual.getSig();
         }
         return actual != null;
@@ -50,7 +50,7 @@ public class OrdenadaEnlazadaCentinela {
             while(actual.getSig() != null && actual.getSig().getElem() != elem){
                 actual = actual.getSig();
             }
-            if (actual == null) {
+            if (actual == null || actual.getSig().getElem() > elem) {
                 System.out.println("El elemento no esta");
             }
             actual.setSig(actual.getSig().getSig());

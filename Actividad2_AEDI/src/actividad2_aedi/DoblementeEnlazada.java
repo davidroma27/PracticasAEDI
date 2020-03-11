@@ -23,26 +23,37 @@ public class DoblementeEnlazada {
         return numElem;
     }
     
+    public int numVeces(int elem){
+        DobleNodo actual;
+        int cont = 0;
+        
+        for(actual = primero; actual != null; actual = actual.getSig()){
+            if(actual.getElem() == elem){
+                cont++;
+            }
+        }
+        return cont;
+    }
+    
     public void insertarPrincipio(int elem){
         DobleNodo nuevo = new DobleNodo(elem, primero, null);
         
-        if(primero != null){
-            primero.setAnt(nuevo);
+        if(primero == null){
+            ultimo = nuevo;
         }
-        else ultimo = nuevo;
+        else primero.setAnt(nuevo);
         primero = nuevo;
         numElem++;
     }
     
     public void insertarFinal(int elem){
-        DobleNodo nuevo = new DobleNodo(elem, null, null);
+        DobleNodo nuevo = new DobleNodo(elem, null, ultimo);
         
         if(primero == null){
             primero = nuevo;
         }
         else{
             ultimo.setSig(nuevo);
-            nuevo.setAnt(ultimo);
         }
         ultimo = nuevo;
         numElem++;
@@ -75,7 +86,7 @@ public class DoblementeEnlazada {
                         System.out.println("El elemento no está");
                     }
                     else if(actual == ultimo){ //Borrar el ultimo elemento
-                            ultimo.getAnt().setSig(null);
+                            actual.getAnt().setSig(null);
                             ultimo = ultimo.getAnt();
                             numElem--;  
                     }
